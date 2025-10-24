@@ -16,6 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -37,7 +40,7 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
+/* Стилизация полосы прокрутки */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -49,3 +52,52 @@ ol {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
+
+.main-container {
+  /*width: 1140px;*/
+  /*height: 564px;*/
+  /*padding: 133px 30px;*/
+  display: grid;
+  grid-template-areas: "result details";
+  align-items: end;
+  grid-template-columns: 711px 399px;
+  gap: 30px;
+}
+
+.result {
+  grid-area: result;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.details-panel {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  block-size: 100%;
+  gap: 26px;
+  grid-area: details;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.items-wrapper {
+  position: relative;
+  block-size: 298px;
+  overflow: auto;
+  padding: 2px;
+  gap: 30px;
+}
+
+.media-player-container {
+  width: 711px;
+  height: 386px;
+  position: relative;
+}
+
