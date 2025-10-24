@@ -101,3 +101,248 @@ ol {
   position: relative;
 }
 
+.media-player {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.item-wrapper {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.media-item {
+  display: flex;
+  flex-direction:row;
+  color: #fff;
+  background-color: transparent;
+}
+
+.item-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.item-link:active {
+  background-color: #545050;
+}
+
+
+.item-thumbnail {
+  /* превью медиа-элемента */
+  object-fit:cover;
+  object-position: center;
+  width: 194px;
+  height: 103px;
+}
+
+.item-title {
+  /* заголовок медиа-элемента */
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 196px;
+}
+
+.item-description {
+  /* описание медиа-элемента */
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+  width: 196px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-text-container {
+  /* текстовая область медиа-элемента */
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.item-link_current {
+  background-color: #545050;
+}
+
+.item-link:hover .item-title,
+.item-link:hover .item-description {
+  text-decoration: underline;
+}
+
+.item-link:focus {
+  outline: none;
+}
+
+.item-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: -1px;
+  background-color: transparent;
+}
+
+.accent-color {
+  color: #545050;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+  margin: 0 0 26px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.button {
+  border: 1px solid currentColor;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  background-color: transparent;
+  height: 34px;
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 2px;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.form-fieldset {
+  /* сброс рамки */
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-fieldset-title {
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: normal;
+}
+
+.form-label {
+  /* элементы поля формы */
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.form-label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.form-label:hover .form-label-text {
+  text-decoration: underline;
+}
+
+.form-label:has(.form-textfield:focus-visible) {
+  border: none;
+  outline: 1px solid #fff;
+}
+
+.form-textfield {
+  /* Стилизация текстового поля */
+  appearance: none;
+  border: none;
+  outline: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 100%;
+  width: 225px;
+}
+
+.form-checkbox-list {
+  /* чекбоксы в линию */
+  display: flex;
+  gap:15px;
+  justify-content: center;
+}
+
+.form-pseudo-checkbox {
+  /* Стилизация чекбокса */
+  position: relative;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  display: inline-block;
+}
+
+.form-pseudo-checkbox::after {
+  /* Внутренний квадрат — скрыт по умолчанию */
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  display: none;
+}
+
+.form-checkbox:checked + .form-pseudo-checkbox::after {
+  /* Показываем квадрат, если чекбокс отмечен */
+  display: block;
+}
